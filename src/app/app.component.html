@@ -41,19 +41,17 @@
   }
 </style>
 
-<!-- Toolbar -->
-<div class="toolbar" role="banner">
-
-</div>
-
 <div class="content" role="main">
 
-  <p-card header="header">
-    <pre>
-      {{ marcas | json}}
-    </pre>
-  </p-card>
+  <div *ngIf="blocked" style="display: flex; align-content: center; justify-content: center; position: absolute">
+    <p-progressSpinner></p-progressSpinner>
+  </div>
+  <p-blockUI [blocked]="blocked" [target]="pnl"></p-blockUI>
+  <p-panel #pnl header="Preço da AMAROK">
+    <h3>Valor da AMAROK Trendline CD 2.0 TDI 4X4 Dies Aut é: <i style="color: #900">{{valorDoVeiculo}}</i></h3>
+  </p-panel>
 
+  <router-outlet></router-outlet>
 
 </div>
 

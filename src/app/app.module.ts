@@ -8,6 +8,10 @@ import {CardModule} from 'primeng/card';
 import { SharedModule } from './shared/shared.module';
 import { FeatureModule } from './feature/feature.module';
 import {HttpClientModule} from '@angular/common/http';
+import {BlockUIModule} from 'primeng/blockui';
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
+import {PanelModule} from 'primeng/panel';
+
 
 @NgModule({
   declarations: [
@@ -18,6 +22,9 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserAnimationsModule,
     AppRoutingModule,
     CardModule,
+    BlockUIModule,
+    PanelModule,
+    ProgressSpinnerModule,
     SharedModule,
     FeatureModule,
     HttpClientModule
