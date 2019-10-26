@@ -44,5 +44,25 @@ export class AppComponent {
     this.blocked = false;
   }
 
+  /*rxjs() {
+    this.http.get(`http://fipeapi.appspot.com/api/1/carros/marcas.json`)
+      .pipe(
+        map((marca: any) => marca.filter((mar: any) => mar.name === 'VOLKSWAGEN')[0]),
+        switchMap((volk: any) => {
+          this.volkswagenId = volk.id;
+          return this.http.get(`http://fipeapi.appspot.com/api/1/carros/veiculos/${volk.id}.json`);
+        }),
+        map((vei: any) => vei.filter((v: any) => v.name === 'AMAROK Trendline CD 2.0 TDI 4X4 Dies Aut')[0]),
+        switchMap((amarok: any) => {
+          return this.http.get(`http://fipeapi.appspot.com/api/1/carros/veiculo/${this.volkswagenId}/${amarok.id}/2018-3.json`);
+        }),
+        finalize(() => this.loading = false)
+      )
+      .subscribe((data: any) => this.carro = data);
+  }*/
+
+
+
+
 
 }
